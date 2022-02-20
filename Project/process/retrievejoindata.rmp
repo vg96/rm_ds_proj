@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.10.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.10.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Read Excel GDP" width="90" x="45" y="85">
+        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/GDP.xlsx"/>
+        <parameter key="sheet_selection" value="sheet number"/>
+        <parameter key="sheet_number" value="1"/>
+        <parameter key="imported_cell_range" value="A1"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="date_format" value=""/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Country.true.polynominal.attribute"/>
+          <parameter key="1" value="GDP country.true.real.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="store" compatibility="9.10.001" expanded="true" height="68" name="Store GDP" width="90" x="179" y="85">
+        <parameter key="repository_entry" value="//Project/data/GDP"/>
+      </operator>
+      <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Read Excel Food Supply Quantity" width="90" x="45" y="187">
+        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/FoodSupplyQuantity_kg.xlsx"/>
+        <parameter key="sheet_selection" value="sheet number"/>
+        <parameter key="sheet_number" value="1"/>
+        <parameter key="imported_cell_range" value="A1"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="date_format" value=""/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Country.true.polynominal.attribute"/>
+          <parameter key="1" value="Regions.true.polynominal.attribute"/>
+          <parameter key="2" value="Alcoholic Beverages.true.real.attribute"/>
+          <parameter key="3" value="Animal Products.true.real.attribute"/>
+          <parameter key="4" value="Aquatic Products, Other.true.real.attribute"/>
+          <parameter key="5" value="Cereals - Excluding Beer.true.real.attribute"/>
+          <parameter key="6" value="Fish, Seafood.true.real.attribute"/>
+          <parameter key="7" value="Fruits - Excluding Wine.true.real.attribute"/>
+          <parameter key="8" value="Meat.true.real.attribute"/>
+          <parameter key="9" value="Pulses.true.real.attribute"/>
+          <parameter key="10" value="Starchy Roots.true.real.attribute"/>
+          <parameter key="11" value="Stimulants.true.real.attribute"/>
+          <parameter key="12" value="Sugar &amp; Sweeteners.true.real.attribute"/>
+          <parameter key="13" value="Vegetables.true.real.attribute"/>
+          <parameter key="14" value="Vegetal Products.true.real.attribute"/>
+          <parameter key="15" value="Obesity.true.real.attribute"/>
+          <parameter key="16" value="Undernourished.true.polynominal.attribute"/>
+          <parameter key="17" value="Population.true.integer.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="store" compatibility="9.10.001" expanded="true" height="68" name="Store Food Suply" width="90" x="179" y="187">
+        <parameter key="repository_entry" value="//Project/data/FoodSupplyQuantity"/>
+      </operator>
+      <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Read Excel Life Expectancy" width="90" x="45" y="289">
+        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/LifeExpecatncy.xlsx"/>
+        <parameter key="sheet_selection" value="sheet number"/>
+        <parameter key="sheet_number" value="1"/>
+        <parameter key="imported_cell_range" value="A1"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="date_format" value=""/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Country.true.polynominal.attribute"/>
+          <parameter key="1" value="Life expectancy.true.real.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="store" compatibility="9.10.001" expanded="true" height="68" name="Store Life Expectancy" width="90" x="179" y="289">
+        <parameter key="repository_entry" value="//Project/data/LifeExpectancy"/>
+      </operator>
+      <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Read Excel Regions" width="90" x="45" y="391">
+        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/Regions.xlsx"/>
+        <parameter key="sheet_selection" value="sheet number"/>
+        <parameter key="sheet_number" value="1"/>
+        <parameter key="imported_cell_range" value="A1"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="date_format" value=""/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Country.true.polynominal.attribute"/>
+          <parameter key="1" value="Regions.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="store" compatibility="9.10.001" expanded="true" height="68" name="Store Regions" width="90" x="179" y="391">
+        <parameter key="repository_entry" value="//Project/data/Regions"/>
+      </operator>
+      <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Read Excel WHR 2019" width="90" x="45" y="493">
+        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/WorldHappinessReport2019.xlsx"/>
+        <parameter key="sheet_selection" value="sheet number"/>
+        <parameter key="sheet_number" value="1"/>
+        <parameter key="imported_cell_range" value="A1"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="date_format" value=""/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Country or region.true.polynominal.attribute"/>
+          <parameter key="1" value="Score.true.real.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="store" compatibility="9.10.001" expanded="true" height="68" name="Store WHR" width="90" x="179" y="493">
+        <parameter key="repository_entry" value="//Project/data/WHR2019"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve Food Supply" width="90" x="313" y="85">
+        <parameter key="repository_entry" value="../data/FoodSupplyQuantity"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve GDP" width="90" x="313" y="187">
+        <parameter key="repository_entry" value="../data/GDP"/>
+      </operator>
+      <operator activated="true" class="concurrency:join" compatibility="9.10.001" expanded="true" height="82" name="Join" width="90" x="447" y="136">
+        <parameter key="remove_double_attributes" value="true"/>
+        <parameter key="join_type" value="inner"/>
+        <parameter key="use_id_attribute_as_key" value="false"/>
+        <list key="key_attributes">
+          <parameter key="Country" value="Country"/>
+        </list>
+        <parameter key="keep_both_join_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="store" compatibility="9.10.001" expanded="true" height="68" name="Store GDP Join" width="90" x="581" y="136">
+        <parameter key="repository_entry" value="../data/JoinGDP"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve GDP Join" width="90" x="313" y="289">
+        <parameter key="repository_entry" value="../data/JoinGDP"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve Life Expectancy" width="90" x="313" y="391">
+        <parameter key="repository_entry" value="../data/LifeExpectancy"/>
+      </operator>
+      <operator activated="true" class="concurrency:join" compatibility="9.10.001" expanded="true" height="82" name="Join (2)" width="90" x="447" y="340">
+        <parameter key="remove_double_attributes" value="true"/>
+        <parameter key="join_type" value="inner"/>
+        <parameter key="use_id_attribute_as_key" value="false"/>
+        <list key="key_attributes">
+          <parameter key="Country" value="Country"/>
+        </list>
+        <parameter key="keep_both_join_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="store" compatibility="9.10.001" expanded="true" height="68" name="Store Life Expectancy Join" width="90" x="581" y="340">
+        <parameter key="repository_entry" value="../data/JoinLifeExpectancy"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve Join Life Expectancy" width="90" x="313" y="493">
+        <parameter key="repository_entry" value="../data/JoinLifeExpectancy"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve Regions" width="90" x="313" y="595">
+        <parameter key="repository_entry" value="../data/Regions"/>
+      </operator>
+      <operator activated="true" class="concurrency:join" compatibility="9.10.001" expanded="true" height="82" name="Join (3)" width="90" x="447" y="544">
+        <parameter key="remove_double_attributes" value="true"/>
+        <parameter key="join_type" value="inner"/>
+        <parameter key="use_id_attribute_as_key" value="false"/>
+        <list key="key_attributes">
+          <parameter key="Country" value="Country"/>
+        </list>
+        <parameter key="keep_both_join_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="store" compatibility="9.10.001" expanded="true" height="68" name="Store Join Region" width="90" x="581" y="493">
+        <parameter key="repository_entry" value="../data/JoinRegions"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve Join Regions" width="90" x="313" y="697">
+        <parameter key="repository_entry" value="../data/JoinRegions"/>
+      </operator>
+      <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve WHR 2019" width="90" x="313" y="799">
+        <parameter key="repository_entry" value="../data/WHR2019"/>
+      </operator>
+      <operator activated="true" class="concurrency:join" compatibility="9.10.001" expanded="true" height="82" name="Join (4)" width="90" x="447" y="748">
+        <parameter key="remove_double_attributes" value="true"/>
+        <parameter key="join_type" value="left"/>
+        <parameter key="use_id_attribute_as_key" value="false"/>
+        <list key="key_attributes">
+          <parameter key="Country" value="Country or region"/>
+        </list>
+        <parameter key="keep_both_join_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="store" compatibility="9.10.001" expanded="true" height="68" name="Store final Join" width="90" x="648" y="748">
+        <parameter key="repository_entry" value="../data/finaldata"/>
+      </operator>
+      <connect from_op="Read Excel GDP" from_port="output" to_op="Store GDP" to_port="input"/>
+      <connect from_op="Read Excel Food Supply Quantity" from_port="output" to_op="Store Food Suply" to_port="input"/>
+      <connect from_op="Read Excel Life Expectancy" from_port="output" to_op="Store Life Expectancy" to_port="input"/>
+      <connect from_op="Read Excel Regions" from_port="output" to_op="Store Regions" to_port="input"/>
+      <connect from_op="Read Excel WHR 2019" from_port="output" to_op="Store WHR" to_port="input"/>
+      <connect from_op="Retrieve Food Supply" from_port="output" to_op="Join" to_port="left"/>
+      <connect from_op="Retrieve GDP" from_port="output" to_op="Join" to_port="right"/>
+      <connect from_op="Join" from_port="join" to_op="Store GDP Join" to_port="input"/>
+      <connect from_op="Retrieve GDP Join" from_port="output" to_op="Join (2)" to_port="left"/>
+      <connect from_op="Retrieve Life Expectancy" from_port="output" to_op="Join (2)" to_port="right"/>
+      <connect from_op="Join (2)" from_port="join" to_op="Store Life Expectancy Join" to_port="input"/>
+      <connect from_op="Retrieve Join Life Expectancy" from_port="output" to_op="Join (3)" to_port="left"/>
+      <connect from_op="Retrieve Regions" from_port="output" to_op="Join (3)" to_port="right"/>
+      <connect from_op="Join (3)" from_port="join" to_op="Store Join Region" to_port="input"/>
+      <connect from_op="Retrieve Join Regions" from_port="output" to_op="Join (4)" to_port="left"/>
+      <connect from_op="Retrieve WHR 2019" from_port="output" to_op="Join (4)" to_port="right"/>
+      <connect from_op="Join (4)" from_port="join" to_op="Store final Join" to_port="input"/>
+      <connect from_op="Store final Join" from_port="through" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+    </process>
+  </operator>
+</process>
