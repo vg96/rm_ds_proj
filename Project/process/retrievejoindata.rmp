@@ -13,7 +13,7 @@
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
       <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Read Excel GDP" width="90" x="45" y="85">
-        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/GDP.xlsx"/>
+        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/Ohne Titel/datasets/GDP.xlsx"/>
         <parameter key="sheet_selection" value="sheet number"/>
         <parameter key="sheet_number" value="1"/>
         <parameter key="imported_cell_range" value="A1"/>
@@ -34,7 +34,7 @@
         <parameter key="repository_entry" value="//Project/data/GDP"/>
       </operator>
       <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Read Excel Food Supply Quantity" width="90" x="45" y="187">
-        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/FoodSupplyQuantity_kg.xlsx"/>
+        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/Ohne Titel/datasets/FoodSupplyQuantity_kg.xlsx"/>
         <parameter key="sheet_selection" value="sheet number"/>
         <parameter key="sheet_number" value="1"/>
         <parameter key="imported_cell_range" value="A1"/>
@@ -71,7 +71,7 @@
         <parameter key="repository_entry" value="//Project/data/FoodSupplyQuantity"/>
       </operator>
       <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Read Excel Life Expectancy" width="90" x="45" y="289">
-        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/LifeExpecatncy.xlsx"/>
+        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/Ohne Titel/datasets/LifeExpecatncy.xlsx"/>
         <parameter key="sheet_selection" value="sheet number"/>
         <parameter key="sheet_number" value="1"/>
         <parameter key="imported_cell_range" value="A1"/>
@@ -92,7 +92,7 @@
         <parameter key="repository_entry" value="//Project/data/LifeExpectancy"/>
       </operator>
       <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Read Excel Regions" width="90" x="45" y="391">
-        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/Regions.xlsx"/>
+        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/Ohne Titel/datasets/Regions.xlsx"/>
         <parameter key="sheet_selection" value="sheet number"/>
         <parameter key="sheet_number" value="1"/>
         <parameter key="imported_cell_range" value="A1"/>
@@ -113,7 +113,7 @@
         <parameter key="repository_entry" value="//Project/data/Regions"/>
       </operator>
       <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Read Excel WHR 2019" width="90" x="45" y="493">
-        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/WorldHappinessReport2019.xlsx"/>
+        <parameter key="excel_file" value="/Users/viktoria/Desktop/Projekt_IntroToDS/Ohne Titel/datasets/WorldHappinessReport2019.xlsx"/>
         <parameter key="sheet_selection" value="sheet number"/>
         <parameter key="sheet_number" value="1"/>
         <parameter key="imported_cell_range" value="A1"/>
@@ -184,7 +184,7 @@
         </list>
         <parameter key="keep_both_join_attributes" value="false"/>
       </operator>
-      <operator activated="true" class="store" compatibility="9.10.001" expanded="true" height="68" name="Store Join Region" width="90" x="581" y="493">
+      <operator activated="true" class="store" compatibility="9.10.001" expanded="true" height="68" name="Store Join Region" width="90" x="581" y="544">
         <parameter key="repository_entry" value="../data/JoinRegions"/>
       </operator>
       <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve Join Regions" width="90" x="313" y="697">

@@ -12,28 +12,10 @@
     <parameter key="process_duration_for_mail" value="30"/>
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
-      <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Read Excel" width="90" x="179" y="85">
-        <parameter key="excel_file" value="/Users/viktoria/Downloads/1.5_Data_added_NAs.xlsx"/>
-        <parameter key="sheet_selection" value="sheet number"/>
-        <parameter key="sheet_number" value="1"/>
-        <parameter key="imported_cell_range" value="A1"/>
-        <parameter key="encoding" value="SYSTEM"/>
-        <parameter key="first_row_as_names" value="true"/>
-        <list key="annotations"/>
-        <parameter key="date_format" value=""/>
-        <parameter key="time_zone" value="SYSTEM"/>
-        <parameter key="locale" value="English (United States)"/>
-        <parameter key="read_all_values_as_polynominal" value="false"/>
-        <list key="data_set_meta_data_information"/>
-        <parameter key="read_not_matching_values_as_missings" value="true"/>
+      <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve" width="90" x="246" y="34">
+        <parameter key="repository_entry" value="../data/finaldata"/>
       </operator>
-      <operator activated="true" class="store" compatibility="9.10.001" expanded="true" height="68" name="Store" width="90" x="447" y="85">
-        <parameter key="repository_entry" value="//Local Repository/data/Data"/>
-      </operator>
-      <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve" width="90" x="179" y="340">
-        <parameter key="repository_entry" value="//Local Repository/data/Data"/>
-      </operator>
-      <operator activated="true" class="filter_examples" compatibility="9.10.001" expanded="true" height="103" name="Filter Examples" width="90" x="313" y="340">
+      <operator activated="true" class="filter_examples" compatibility="9.10.001" expanded="true" height="103" name="Filter Examples" width="90" x="380" y="34">
         <parameter key="parameter_expression" value=""/>
         <parameter key="condition_class" value="custom_filters"/>
         <parameter key="invert_filter" value="false"/>
@@ -43,12 +25,11 @@
         <parameter key="filters_logic_and" value="true"/>
         <parameter key="filters_check_metadata" value="true"/>
       </operator>
-      <operator activated="true" class="blending:sort" compatibility="9.10.001" expanded="true" height="82" name="Sort" width="90" x="581" y="238">
+      <operator activated="true" class="blending:sort" compatibility="9.10.001" expanded="true" height="82" name="Sort" width="90" x="581" y="34">
         <list key="sort_by">
           <parameter key="Meat" value="ascending"/>
         </list>
       </operator>
-      <connect from_op="Read Excel" from_port="output" to_op="Store" to_port="input"/>
       <connect from_op="Retrieve" from_port="output" to_op="Filter Examples" to_port="example set input"/>
       <connect from_op="Filter Examples" from_port="example set output" to_op="Sort" to_port="example set input"/>
       <connect from_op="Sort" from_port="example set output" to_port="result 1"/>
